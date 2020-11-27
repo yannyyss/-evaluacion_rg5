@@ -9,8 +9,8 @@ def read_csv():
     with open(route, 'r') as archivo_csv:
         doc = csv.DictReader(archivo_csv)
         list = []
-        for linea in doc:
-            list.append(linea)
+        for line in doc:
+            list.append(line)
         return jsonify(list)
 
 if __name__ == '__main__':
