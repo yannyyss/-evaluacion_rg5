@@ -7,7 +7,7 @@ app = Flask(__name__)
 def read_csv():
     route = 'data/employees.csv'
     with open(route, 'r') as archivo_csv:
-        doc = csv.reader(archivo_csv)
+        doc = csv.DictReader(archivo_csv)
         list = []
         for linea in doc:
             list.append(linea)
